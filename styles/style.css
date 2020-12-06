@@ -8,9 +8,27 @@ head{
     border: ipx solid rgb(163, 163, 38);
 }
 h1{
-    color:black;
+    background: #333;
+	color: white;
+	 padding: 0.5em;
+	  
+	border-bottom: solid 3px black;
 }
 p{
-    background-color: rgb(145, 99, 14);
-    color:blue;
+    color:black;
+}
+
+.titleItem {
+    color: white;
+	padding: 1.0em;
+}
+
+.titleMenu {
+	display: flex;
+	 justify-content: flex-end;
+	 list-style: none;
+	 
+	 position: absolute;
+    top: 35px;
+    right: 5%;
 }
