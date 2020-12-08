@@ -1,175 +1,113 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>AtCoderを始めよう</title>
-    <style>
-        a:link {text-decoration:none;}   
-        a:visited {text-decoration:#FF00;} 
-        a:hover {text-decoration:underline;}   
-        a:active {text-decoration:underline;}  
-    </style>
-    <link rel="stylesheet" href="style/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="styles/style.css">
-    <script src="main.js"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>問題例と解答例</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='styles/style.css'>
+    <script src='main.js'></script>
 </head>
 
 <body>
+<h1 id="atcoderの始め方">AtCoderの始め方</h1>
+<h2 id="atcoderとは">AtCoderとは？</h2>
+<!--- 
+    AtCoderについて知ってもらう
+    興味を持ってもらう
+-->
+<p>AtCoderとは，株式会社AtCoderによる <strong>競技プログラミング</strong> の大会が開催されるサイトです．</p>
+<p>競技プログラミングとは，文字通り競技としてのプログラミングのことで，大会に参加したユーザーは出題されたプログラミングの問題を解き，制限時間内に解けた数などで他のユーザーと競い合います．</p>
+<h2 id="実際にどんな問題が出てくるのか">実際にどんな問題が出てくるのか</h2>
+<p>雰囲気を掴むためにとりあえず一つ問題を見てみましょう．</p>
+<hr />
+<p>(ABC 084 A の問題を見せる)</p>
+<p>まとめると「a×bが偶数だったら’Even’を，奇数だったら“Odd”を出力するプログラムを作ってね」という問題です． 入力ってどう実装するの？などの疑問はひとまず置いといて，これをProcessingで作ってみましょう．</p>
+<p>まずは問題を解く方法，つまりaとbの積が偶数か奇数か判定する方法を考える必要がありますが，これは簡単だと思います． aとbの積を2でで割った余りが0なら偶数で，1であれば奇数だと分かります．</p>
+<p>あとはif文で条件分岐をして出力内容を変えれば良いだけです． ひとまず入力例1の通りa=3, b=4としてProcessingで実装してみるとこんな感じになります．</p>
+<p>(Processingのプログラムを見せる)</p>
+<p>ちゃんと“Even”と出力されていますね． ちなみに入力例2のようにa=1, b=21としてもちゃんと“Odd”と出力されます．どうやらこのプログラムは正しそうです．</p>
+<hr />
+<p>どうでしょうか． これは簡単な問題でしたが，基本的にAtCoderの問題の流れはこんな感じです． 基礎プログラミングや情報科学実習で解くような問題とも若干似ていると思います</p>
+<h2 id="atcoderをするメリット">AtCoderをするメリット</h2>
+<h3 id="企業に通用するアルゴリズム力が身につけられる">企業に通用するアルゴリズム力が身につけられる</h3>
+<p>AtCoderでは<strong>アルゴリズム(問題を解決するための手続きや方法)を考えてプログラムで実装する能力</strong>が求められます．</p>
+<p>また，AtCoderにはレーティングのシステムがあるので，ここで良い成績を収めれば自分の能力を客観的な数値で他の人にアピールすることもできます．</p>
+<p>このサイトによれば，レーティングが400以上であれば<em>各大学の情報系学部でしっかりとプログラミングを勉強して上位 1 割の成績を収めている学生さんの実力</em>，800以上であれば<em>ソフトウェアエンジニアとして大変優秀な実力</em>と評価されるそうです．</p>
+<p>ちなみに実際にAtCoderの成績で就活できるAtCoderJobsというサイトもあります．</p>
+<h3 id="研究室選びにも繋がる">研究室選びにも繋がる</h3>
+<p>情報科学科にはアルゴリズムを研究している教授も多く，AtCoderの勉強ついでに教授の研究テーマに触れることもできます． 興味のあるテーマが見つかるかもしれません．</p>
+<h3 id="初心者に優しい">初心者に優しい</h3>
+<p>AtCoderは数ある競技プログラミングサイトの中の一つですが，</p>
+<ul>
+<li>日本の会社が運営している</li>
+<li>だいたい毎週コンテスト(大会)が開催されている</li>
+<li>大量の過去問とその解説に無料でアクセスできる</li>
+<li>初心者向けの問題も出題される</li>
+</ul>
+<p>といった特徴があります． また，</p>
+<h3 id="モチベーションを維持しやすい">モチベーションを維持しやすい</h3>
+<p>AtCoderにはレーティングシステムが存在します． レーティングの数値は毎回のコンテストの成績から算出されるので，自分の実力を客観的な尺度で測れるということですね．</p>
+<p>(目標を立てることにも使えるという意の文章)</p>
+<p>この数値は他人に自分の実力をアピールすることにも使えます． 例えばAtCoderの社長である高橋直大さんが書いたこの記事(http://chokudai.hatenablog.com/entry/2019/02/11/155904)によると，AtCoderで茶色(レーティング400以上)のユーザーは <em>情報系の学生が茶色であれば、ちゃんと勉強してるなって印象になる</em> そうです． アピールポイントを作るために頑張ろう！というようにモチベーションに繋げることもできますね．</p>
+<!-- 
 
-    <header>
-        <h1>AtCoderの始め方</h1>
-    </header>
-    
-    <ul class = "titleMenu">
-		<li><a class="titleItem" href="how_to_start.html">AtCoderの始め方</a></li>
-		<li><a class="titleItem" href="example_questions.html">例題集</a></li>
-		<li><a class="titleItem" href="how_to_search.html">困ったときの調べ方</a></li>
-		<li><a class="titleItem" href="recommendation_sites.html">おすすめサイト</a></li>
-	</ul>
+### 競技性が高い
 
-    <section>
-        <h2>AtCoderとは</h2>
+<!--
+    競技性が高いのでゲームのように競える？
+    実力や努力の成果がリアルタイムで反映される
+-->
+<p>AtCoderの最も魅力的な点の一つが<strong>競技性の高さ</strong>にあります．</p>
+<p>–&gt;</p>
+<h2 id="やってみよう">やってみよう</h2>
+<!--- 
+    具体的な勉強方法等を知ってもらう
 
-        <section>
-            <h3>そもそもAtCoderって何のサイト？</h3>
-            
-            <p>
-                AtCoderは，株式会社AtCoderが運営している日本発の競技プログラミングのサイトです．<br>
-
-                競技プログラミングとはその名の通り他の人々とプログラミングでスコアを競うことで，例えばAtCoderでは，出された問題を解くプログラムを書き，制限時間内に解けた問題の数でスコアが決まります．<br>
-            </p>
-        </section>
-
-        <section>
-            <h3>どんな問題が出てくるの？
-            </h3>
-
-            <p>
-                とはいえ，これだけではどんな問題が出てくるのか分からないと思うので，具体例を見ながら雰囲気を掴んでいきましょう．
-            </p>
-
-            <article class="problem">
-                <h2><a href="https://atcoder.jp/contests/abs/tasks/abc086_a" target="_blank">ABC 086 A - Product</a></h2>
-
-
-                <div class="part">
-                <section>
-                    <h3>問題文</h3>
-
-                    <p>
-                        シカのAtCoDeerくんは二つの正整数 <var>a,b</var> を見つけました。
-                        <var>a</var> と <var>b</var> の積が偶数か奇数か判定してください。
-                    </p>
-                </section>
-                </div>
-
-                <div class="part">
-                <section>
-                    <h3>制約</h3>
-                    <ul>
-                        <li><var>1</var> <var>≤</var> <var>a,b</var> <var>≤</var> <var>10000</var></li>
-                        <li><var>a,b</var> は整数</li>
-                    </ul>
-                </section>
-                </div>
-
-                <hr/>
-
-                <div class="io-style">
-                <div class="part">
-                <section>
-                <h3>入力</h3><p>入力は以下の形式で標準入力から与えられる。</p>
-                <pre><var>a</var> <var>b</var>
-                </pre>
-
-                </section>
-                </div>
-
-                <div class="part">
-                <section>
-                <h3>出力</h3><p>積が奇数なら <code>Odd</code> と、 偶数なら <code>Even</code> と出力せよ。</p>
-                </section>
-                </div>
-                </div>
-
-                <hr />
-
-                <div class="part">
-                <section>
-                <h3>入力例 1</h3><pre>3 4
-                </pre>
-
-                </section>
-                </div>
-
-                <div class="part">
-                <section>
-                <h3>出力例 1</h3><pre>Even
-                </pre>
-
-                <p><var>3 × 4 = 12</var> は偶数なので <code>Even</code> を出力してください。</p>
-                </section>
-                </div>
-
-                <hr />
-
-                <div class="part">
-                <section>
-                <h3>入力例 2</h3><pre>1 21
-                </pre>
-
-                </section>
-                </div>
-
-                <div class="part">
-                <section>
-                <h3>出力例 2</h3><pre>Odd
-                </pre>
-
-                <p><var>1 × 21 = 21</var> は奇数なので <code>Odd</code> を出力してください。</p></section>
-                </div>
-            </article>
-
-            
-
-        </section>
-
-        <section>
-            <h3>Processingでもできる？</h3>
-        </section>
-    </section>
-
-    <section>
-        <h2>具体的な始め方</h2>
-
-        <section>
-            <h3>アカウントを作ろう</h3>
-        </section>
-
-        <section>
-            <h3>試しに問題を解いてみよう</h3>
-        </section>
-    </section>
-
-    <section>
-        <h2>Java, C++, Pythonの学び方</h2>
-
-        <section>
-            <h3>分からないときはGoogleで検索してみよう</h3>
-        </section>
-
-        <section>
-            <h3>公式のドキュメントを読んでみよう</h3>
-        </section>
-    </section>
-
-    <section>
-        <h2>コンテストに参加してみよう</h2>
-    </section>
+    AtCoderへの登録方法
+    どの言語が使えるのか
+    言語の勉強方法
+    お役立ちサイト
+    例題集(グループでつくったやつ)
+    コンテストへの参加方法
+    尾上先生が作ってたチャンネルを紹介
+-->
+<p>それでは，具体的にAtCoderをどう始めればよいかを説明します．</p>
+<h3 id="使える言語">使える言語</h3>
+<!--- 
+    Processingは使えない
+    Java，C++, Pythonについての説明
+    勉強方法の説明
+-->
+<p>AtCoderはC, C++, C#, Python, Java, JavaScript, Rubyなど多くの言語に対応していますが，結論から言うと<strong>Processingは使えません</strong>．</p>
+<p>しかし，Processingの派生元で文法も似通っている<strong>Java</strong>や，今流行りの<strong>Python</strong>，処理速度が高速な <strong>C, C++</strong> など，AtCoderは多くの言語に対応しています． これを機会に新しい言語を学んでみるのも一つの手です．</p>
+<h4 id="javaの長所">Javaの長所</h4>
+<ul>
+<li>Processingの派生元で学習し易い</li>
+<li>世界で二番目(一位はCOBOLだが使いどころが少ない？)にコードが多い</li>
+<li>MinecraftやAndroidアプリケーションなどで身近</li>
+<li>オブジェクト指向を身に付けられる</li>
+</ul>
+<h4 id="pythonの長所">Pythonの長所</h4>
+<ul>
+<li>科学計算や機械学習(人工知能)の分野で幅広く使われている</li>
+<li>動的型付けなので数値などを扱いやすい</li>
+<li>ライブラリが豊富なので一から実装する必要がない場合も多い(AtCoderで使える標準ライブラリも多い)</li>
+</ul>
+<h4 id="cの長所と短所">C++の長所と短所</h4>
+<ul>
+<li>他言語に比べても処理速度が高速で，AtCoderのプログラムを書く上で有利</li>
+<li>機械語に近く，コンピューターに対しての細かい走査までできる</li>
+<li>日本語のドキュメントが充実している</li>
+</ul>
+<h3 id="アカウントを作ろう">アカウントを作ろう</h3>
+<p>(どっかのページを紹介)</p>
+<h3 id="過去問を解こう">過去問を解こう</h3>
+<p>このページで過去問を紹介しています．</p>
+<h3 id="コーディングでつまづいたときの調べ方">コーディングでつまづいたときの調べ方</h3>
+<p>このページで解説しています．</p>
+<h3 id="コンテストに参加してみよう">コンテストに参加してみよう</h3>
+<p>タイミングが合えば，コンテストに参加して空気感を掴んでみるのがよいでしょう． AtCoderのコンテストにはいくつか種類がありますが，その中の一つである<strong>AtCoder Beginners Contest (ABC)</strong> では初心者向けの問題も出題されます．</p>
 
 </body>
- 
 </html>
