@@ -53,3 +53,31 @@ code{
      top: 35px;
      right: 5%;
 }
+
+.centerTitle{
+	text-align: center;
+}
+
+.blockA {
+   float: left;
+   width: 45%;
+   height: 400px;
+}
+
+.blockB {
+   float: right;
+   width: 45%;
+   height: 400px;
+}
+
+.blockC {
+   float: left;
+   width: 45%;
+   height: 400px;
+}
+
+.blockD {
+   float: right;
+   width: 45%;
+   height: 400px;
+}
